@@ -34,7 +34,8 @@ public class WhiteTiger extends Critter {
 
         moves++;
 
-        if (info.getFront() == Neighbor.OTHER) {
+        if(info.getFront()==Neighbor.OTHER){
+            infected=true;
             return Action.INFECT;
         } else if(info.getFront() == Neighbor.WALL && info.getRight() == Neighbor.WALL) {
             return Action.LEFT;
