@@ -42,6 +42,7 @@ public class NinjaCat extends Critter {
         moves++;
 // Following WhiteTiger's movement
         if (info.getFront() == Neighbor.OTHER) {
+            infected=true;
             return Action.INFECT;
         } else if(info.getFront() == Neighbor.WALL && info.getRight() == Neighbor.WALL) {
             return Action.LEFT;
